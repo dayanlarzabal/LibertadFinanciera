@@ -1,32 +1,48 @@
-# Libertad Financiera — Android
+# Libertad Financiera Premium
 
-Aplicación educativa Android en Kotlin. Incluye:
-- Biblioteca de libros con fichas y resúmenes originales narrados mediante Text-to-Speech.
-- Lecciones financieras narradas.
-- Simulador de aportes e interés compuesto.
-- Seguimiento local del progreso.
-- Pantalla Premium de demostración.
+Aplicación móvil premium de educación financiera con **voz de mentor**, audiolibros y enseñanza estructurada basada en los mejores libros de finanzas e inversión de la historia.
 
-## Importante sobre derechos de autor
-La versión inicial NO contiene audiolibros completos de terceros. Para publicar audiolibros íntegros se deben adquirir licencias o utilizar obras de dominio público verificadas. Los resúmenes y textos incluidos son originales y educativos. No se deben subir archivos de libros protegidos sin autorización.
+## Características
 
-## Compilar en GitHub
-1. Sube el contenido de esta carpeta a la raíz de un repositorio GitHub.
-2. Añade el workflow `.github/workflows/android.yml` (se entrega en este proyecto).
-3. Abre Actions, selecciona **Build Android APK** y pulsa **Run workflow**.
-4. Al terminar, descarga el artefacto `LibertadFinanciera-debug-apk`.
+- **Mentor de voz** (Text-to-Speech en español) que narra las lecciones como un coach personal
+- **5 libros fundamentales** con lecciones completas:
+  - Padre Rico, Padre Pobre (Kiyosaki)
+  - El Inversor Inteligente (Benjamin Graham)
+  - La Psicología del Dinero (Morgan Housel)
+  - El Hombre Más Rico de Babilonia (George S. Clason)
+  - Piense y Hágase Rico (Napoleon Hill)
+- **Reproductor de audiolibro** con control de velocidad
+- **Chat con el Mentor** inteligente (respuestas basadas en principios de los libros)
+- **Seguimiento de progreso**, rachas y niveles
+- **Plan de acción semanal** práctico
+- Diseño **premium oscuro + dorado**
 
-## Configuración técnica
-- Android Gradle Plugin 8.7.3
-- Kotlin 2.0.21
-- JDK 17
-- Android SDK 35
-- Paquete: `com.libertadfinanciera.app`
-- Min Android: 6.0 (API 23)
+## Cómo generar el APK
 
-## Próximas integraciones
-- Compras premium reales (Google Play Billing o proveedor compatible con distribución directa).
-- Backend y cuentas de usuario.
-- Descargas offline de audio con licencias.
-- Panel administrativo para gestionar catálogo y permisos.
-- Política de privacidad y términos de uso.
+### Opción 1: GitHub Actions (recomendado)
+
+1. Sube este proyecto a un repositorio de GitHub
+2. Ve a la pestaña **Actions**
+3. Ejecuta el workflow **"Build Android APK (Flutter)"**
+4. Descarga el artefacto `LibertadFinanciera-Premium-APK`
+
+### Opción 2: En tu computadora
+
+```bash
+flutter pub get
+flutter build apk --release
+```
+
+El APK quedará en:
+`build/app/outputs/flutter-apk/app-release.apk`
+
+## Requisitos
+
+- Flutter 3.24+
+- Android SDK 21+
+
+## Notas
+
+- La voz del mentor usa el motor TTS del dispositivo (funciona offline).
+- El progreso se guarda localmente en el teléfono.
+- Todo el contenido educativo está incluido en la app.
